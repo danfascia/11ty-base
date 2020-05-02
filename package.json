@@ -1,0 +1,18 @@
+{
+  "name": "11ty-base",
+  "version": "0.1a",
+  "description": "A base 11ty starter with a minimal viable directory structure and configuration",
+  "main": "index.js",
+  "author": "danfascia",
+  "license": "MIT",
+  "scripts": {
+    "dev": "rm -rf dist && eleventy --serve",
+    "build": "rm -rf dist && eleventy"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^0.10.0",
+    "@11ty/eleventy-navigation": "^0.1.5",
+    "dotenv": "^8.2.0",
+    "html-minifier": "^4.0.0"
+  }
+}

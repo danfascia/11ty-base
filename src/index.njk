@@ -1,0 +1,28 @@
+---
+layout: "layouts/page.njk"
+title: The index page
+date: 2020-04-30
+
+bodyClass: "green blue red"
+
+eleventyNavigation:
+  title: Homepage
+  key: home
+  parent: 
+  order: 0
+  url:
+  excerpt: 
+---
+
+Anim ut quis minim proident cupidatat irure qui. Veniam voluptate est dolore sunt. In et elit eu magna quis elit Lorem nisi Lorem.
+
+{% set navPages = collections.all | eleventyNavigation %}
+<nav>
+  {% for item in navPages %}
+  <li>
+    <a href="{{item.url}}" title="{{item.title}}" tabindex="{{item.order}}" >{{item.title}}</a>
+  </li>
+  {% endfor %}
+</nav>
+
+{{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
